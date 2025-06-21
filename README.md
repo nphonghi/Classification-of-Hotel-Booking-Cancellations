@@ -44,3 +44,9 @@ Despite these efforts, the **XGBoost model still delivered the best performance*
 | FT-Transformer       | 81.27    | 87.10     | 58.10  | 69.70    | 86.66  |
 
 Given these results, I have chosen to **deploy the XGBoost model** in a basic web application that allows **hotel staff or managers** to predict whether a booking is likely to be canceled based on its details.
+
+## Demo
+![Project Workflow](images/welcome.png)
+![Project Workflow](images/demo.png)
+![Project Workflow](images/true.png)
+![Project Workflow](images/false.png)
