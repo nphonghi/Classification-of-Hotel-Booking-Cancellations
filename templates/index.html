@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Dự đoán Hủy Đặt Phòng Khách Sạn</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+  <header class="app-header">
+    <div class="header-content">
+      <img src="{{ url_for('static', filename='images/bk_logo.png') }}" alt="Logo Bách Khoa" class="header-logo">
+      <img src="{{ url_for('static', filename='images/math_logo.png') }}" alt="Logo Khoa Toán Tin" class="header-logo math">
+      <div class="header-text">
+        <span class="university-name">ĐẠI HỌC BÁCH KHOA HÀ NỘI</span>
+        <span class="faculty-name">KHOA TOÁN - TIN</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="main-content">
+    <section id="welcome-section" class="content-wrapper animate__animated animate__fadeIn">
+      <h1 class="display-5 fw-bold text-dark">Ứng dụng Dự đoán Hủy Đặt Phòng Khách Sạn</h1>
+      <p class="lead text-secondary my-4">
+        Sản phẩm ứng dụng là nội dung của báo cáo cuối kì môn Hệ Hỗ Trợ Quyết Định, được phát triển bởi sinh viên Nguyễn Nhật Phong - 20227140<br>
+        Khoa Toán - Tin, Đại học Bách Khoa Hà Nội
+      </p>      
+      <button id="start-btn" class="btn btn-danger btn-lg shadow-sm">
+        Bắt đầu dự đoán
+      </button>
+    </section>
+
+    <section id="prediction-section" class="content-wrapper d-none">
+      <div class="form-container animate__animated">
+          <h2 class="text-center mb-4 text-danger fw-bold">Nhập thông tin đặt phòng</h2>
+          <form id="booking-form">
+            <div class="row">
+                <div class="col-md-6 mb-3">
+                    <label for="lead_time" class="form-label">Thời gian chờ</label>
+                    <input type="number" class="form-control" id="lead_time" name="lead_time" placeholder="Số ngày từ lúc đặt đến lúc nhận phòng" required>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <label class="form-label">Số lần hủy trước đó</label>
+                    <input type="number" class="form-control" name="previous_cancellations" value="0" min="0">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 mb-3">
+                    <label class="form-label">Loại Đặt Cọc</label>
+                    <select class="form-select" name="deposit_type">
+                        <option value="No Deposit">Không đặt cọc</option>
+                        <option value="Non Refund">Không hoàn lại</option>
+                        <option value="Refundable">Có hoàn lại</option>
+                    </select>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <label class="form-label">Yêu cầu chỗ đậu xe</label>
+                    <select class="form-select" name="required_car_parking_spaces">
+                        <option value="0">Không</option>
+                        <option value="1">Có</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 mb-3">
+                    <label class="form-label">Kênh Đặt Phòng</label>
+                    <select class="form-select" name="market_segment">
+                        <option value="Online TA">Đại lý du lịch online</option>
+                        <option value="Direct">Trực tiếp</option>
+                        <option value="Corporate">Doanh nghiệp</option>
+                    </select>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <label class="form-label">Loại khách hàng</label>
+                    <select class="form-select" name="customer_type">
+                        <option value="Transient">Khách vãng lai</option>
+                        <option value="Contract">Khách hợp đồng</option>
+                    </select>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary w-100 mt-3 fw-bold">🔍 Dự đoán Ngay</button>
+          </form>
+          <div id="result" class="alert mt-4 text-center d-none"></div>
+      </div>
+    </section>
+  </main>
+
+
+  <footer class="app-footer">
+      <div class="footer-left">
+        <img src="{{ url_for('static', filename='images/hust_buildings.png') }}" alt="Tòa nhà HUST" class="footer-image">
+      </div>
+      <div class="footer-right">
+        <span class="copyright-name">© 2025 - Nguyễn Nhật Phong</span>
+        <span class="copyright-email">Email: phong.nn227140@sis.hust.edu.vn</span>
+      </div>
+  </footer>
+
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
