@@ -28,7 +28,7 @@ To balance both Precision and Recall, I use the **F1-score** as the primary eval
 
 ## 🧪 Model Development & Evaluation
 
-During the model development process, I referred to the approach of Farzad Nekouei, particularly for feature engineering and model evaluation. In addition to XGBoost, I also implemented several other models such as **Logistic Regression, LightGBM, and CatBoost**, as well as more modern deep learning models like **TabNet and FT-Transformer**.
+During the model development process, I referred to the approach of **Farzad Nekouei**, particularly for feature engineering and model evaluation. In addition to XGBoost, I also implemented several other models such as **Logistic Regression, LightGBM, and CatBoost**, as well as more modern deep learning models like **TabNet and FT-Transformer**.
 
 Despite these efforts, the **XGBoost model still delivered the best performance**, likely due to better suitability or lack of tuning in other models. Below is the comparison of model performance on the test set:
 
