@@ -45,7 +45,7 @@ Despite these efforts, the **XGBoost model still delivered the best performance*
 
 Given these results, I have chosen to **deploy the XGBoost model** in a basic web application that allows **hotel staff or managers** to predict whether a booking is likely to be canceled based on its details.
 
-## Demo
+## 🚀 Demo
 ![Project Workflow](images/welcome.png)
 ![Project Workflow](images/demo.png)
 ![Project Workflow](images/true.png)
